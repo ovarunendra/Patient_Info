@@ -17,7 +17,6 @@ def add_patient():
     store_info["Age"] = p_age
     store_info["Address"] = p_address
     store_info["Phone"] = p_phone
-    #store_info = ' '.join([p_name,p_gender,p_age,p_address,p_phone])
     patient_record.update({p_id:store_info})
     return patient_record
 
