@@ -1,0 +1,23 @@
+>>>import requests
+
+>>>x = {'id':1,'name':'Varun','gender':'Male','age':24,'address':'UP','phone':12345}
+
+>>>a = requests.post('http://localhost:8080/patient/add', data= x)
+
+>>>a.text
+>>>x = {'id':2,'name':'Varunendra','gender':'Male','age':24,'address':'Bangalore','phone':54689}
+>>>a = requests.post('http://localhost:8080/patient/add', data= x)
+
+>>>x = {'id':3,'name':'Manish','gender':'Male','age':24,'address':'Hyderabad','phone':54569}
+>>>a = requests.post('http://localhost:8080/patient/add', data= x)
+
+>>>a.text
+>>>b = requests.get('http://localhost:8080/patient/show/1')
+>>>b.text
+
+>>>x = {'name':'Manish singh','gender':'Male','age':24,'address':'Hyderabad','phone':54569}
+>>>b = requests.put('http://localhost:8080/patient/update/1', data=x)
+>>>b.text
+
+>>>b = requests.delete('http://localhost:8080/patient/delete/1')
+>>>b.text
